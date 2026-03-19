@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finlab - Inteligência Financeira</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#home">
+                    <img src="images/finlab_logo.jpg" alt="Finlab Logo">
+                </a>
+            </div>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#essencia">Essência</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/258879894385" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+           
+            <h1>Finlab</h1>
+            <p>Inteligência financeira ao seu alcance</p>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2>Sobre a Finlab</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="sobre-grid">
+                <div class="sobre-imagem">
+                    <div class="imagem-forma">
+                        <img src="images/fundadora.jpg" alt="Deisy Mondego">
+                    </div>
+                    <div class="fundadora-info">
+                        <h3>Deisy Mondego</h3>
+                        <p>Fundadora</p>
+                        <div class="social-mini">
+                            <a href="https://www.linkedin.com/in/deisydomingos" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://instagram.com/deisy.mondego" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sobre-texto">
+                    <p class="destaque">Educação financeira prática para transformar vidas.</p>
+                    <p>Na Finlab, acreditamos que dominar as finanças é o primeiro passo para a liberdade. Por isso, criamos mentorias personalizadas que unem conhecimento e propósito.</p>
+                    <p>Nossa missão é capacitar jovens e empreendedores a tomarem decisões conscientes e construírem um futuro próspero.</p>
+                    <a href="#contacto" class="btn btn-secondary">Vamos conversar?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2>O que fazemos</h2>
+            <p class="section-subtitle">Mentoria financeira para cada fase da sua jornada.</p>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-imagem">
+                        <img src="images/servico-mentoria-individual.jpg" alt="Mentoria Individual">
+                        <div class="servico-overlay">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                    </div>
+                    <div class="servico-conteudo">
+                        <h3>Mentoria Individual</h3>
+                        <p>Acompanhamento personalizado para organizar suas finanças e realizar metas.</p>
+                    </div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-imagem">
+                        <img src="images/servico-pequenos-negocios.jpg" alt="Mentoria para Negócios">
+                        <div class="servico-overlay">
+                            <i class="fas fa-store"></i>
+                        </div>
+                    </div>
+                    <div class="servico-conteudo">
+                        <h3>Mentoria para Negócios</h3>
+                        <p>Gestão financeira estratégica para pequenos empreendedores.</p>
+                    </div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-imagem">
+                        <img src="images/servico-empreendedores.jpg" alt="Apoio a Empreendedores">
+                        <div class="servico-overlay">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="servico-conteudo">
+                        <h3>Apoio a Empreendedores</h3>
+                        <p>Orientação para começar um negócio com bases sólidas.</p>
+                    </div>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-imagem">
+                        <img src="images/servico-palestras.jpg" alt="Palestras e Formações">
+                        <div class="servico-overlay">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                    </div>
+                    <div class="servico-conteudo">
+                        <h3>Palestras e Formações</h3>
+                        <p>Workshops sobre educação financeira para empresas e instituições.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa Essência -->
+    <section id="essencia" class="carrossel-essencia">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa Essência</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="carrossel-container">
+                <div class="carrossel-wrapper" id="carrosselWrapper">
+                    <div class="carrossel-slide">
+                        <div class="essencia-card">
+                            <div class="card-icon"><i class="fas fa-bullseye"></i></div>
+                            <h3>Objetivo</h3>
+                            <p>Desenvolver competências financeiras básicas para uma vida adulta equilibrada.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-slide">
+                        <div class="essencia-card">
+                            <div class="card-icon"><i class="fas fa-flag"></i></div>
+                            <h3>Missão</h3>
+                            <p>Promover educação financeira acessível, capacitando jovens e empreendedores.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-slide">
+                        <div class="essencia-card">
+                            <div class="card-icon"><i class="fas fa-eye"></i></div>
+                            <h3>Visão</h3>
+                            <p>Ser referência em educação financeira em Moçambique.</p>
+                        </div>
+                    </div>
+                    <div class="carrossel-slide">
+                        <div class="essencia-card">
+                            <div class="card-icon"><i class="fas fa-heart"></i></div>
+                            <h3>Valores</h3>
+                            <ul class="valores-lista">
+                                <li>Educação transformadora</li>
+                                <li>Responsabilidade</li>
+                                <li>Crescimento sustentável</li>
+                                <li>Empoderamento</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="carrossel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Barra Corporativa -->
+    <section class="corporate-bar">
+        <div class="corporate-overlay"></div>
+        <div class="container corporate-content">
+            <h2>Construindo o futuro financeiro</h2>
+            <p>Compromisso com a excelência e a inovação</p>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fale connosco</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="contacto-wrapper">
+                <!-- Informações de contacto -->
+                <div class="contacto-info-card">
+                    <h3>Estamos aqui</h3>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+258 85 537 2978 | +258 84 123 4567</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>geral@finlab.co.mz</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span><a href="https://wa.me/258879894385" target="_blank">+258 87 989 4385</a></span>
+                    </div>
+                    <div class="social-links-mini">
+                        <a href="https://instagram.com/deisy.mondego" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/deisydomingos" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <!-- Formulário WhatsApp -->
+                <div class="contacto-form-col">
+                    <form class="contacto-form" id="contactForm">
+                        <div class="form-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="nome" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <i class="fas fa-comment"></i>
+                            <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-enviar">
+                            Enviar via WhatsApp <i class="fab fa-whatsapp"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros (versão simplificada: quadrados com ícone e legenda) -->
+    <section class="parceiros">
+        <div class="container">
+            <h3 class="parceiros-titulo">Parceiros</h3>
+            <div class="parceiros-grid">
+                <!-- Parceiro 1: Ivo Munguambe -->
+                <div class="parceiro-item">
+                    <div class="parceiro-quadrado">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <p class="parceiro-nome">Ivo Munguambe</p>
+                    <p class="parceiro-desc">Eng. Sistemas & Designer Gráfico</p>
+                </div>
+
+                <!-- Parceiro 2: A Forja -->
+                <div class="parceiro-item">
+                    <div class="parceiro-quadrado">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <p class="parceiro-nome">A Forja</p>
+                    <p class="parceiro-desc">Clube de Empreendedores</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Finlab. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body> 
+</html>
