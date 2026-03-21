@@ -109,12 +109,44 @@ h2 {
     align-items: center;
 }
 
+/* Logo em texto (estilizada) */
 .logo a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
     text-decoration: none;
-    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1e5a7d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.logo a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+    transition: width 0.3s ease;
+}
+
+.logo a:hover {
+    transform: scale(1.02);
+    color: var(--accent-color);
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    text-shadow: 0 2px 8px rgba(243,156,18,0.2);
+}
+
+.logo a:hover::after {
+    width: 100%;
 }
 
 .nav-menu ul {
@@ -344,7 +376,7 @@ h2 {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.4s;
+    transition: opacity 0.4s ease;
 }
 
 .servico-card:hover .servico-overlay {
@@ -377,6 +409,30 @@ h2 {
 .servico-conteudo p {
     color: var(--text-light);
     font-size: 0.9rem;
+}
+
+/* Animação de entrada (fade-up) para os cards */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação automática do overlay ao scroll */
+.servico-card.auto-overlay .servico-overlay {
+    opacity: 1;
+    animation: overlayFlash 2s ease forwards;
+}
+
+@keyframes overlayFlash {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
 }
 
 /* ===== CARROSSEL ===== */
@@ -664,17 +720,17 @@ h2 {
     transform: translateX(5px);
 }
 
-/* ===== PARCEIROS (compacto) ===== */
+/* ===== PARCEIROS ===== */
 .parceiros {
     background: var(--white);
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .parceiros-titulo {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -689,15 +745,15 @@ h2 {
 
 .parceiro-item {
     text-align: center;
-    max-width: 150px;
+    max-width: 200px;
 }
 
 .parceiro-quadrado {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 12px;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 15px;
     background: linear-gradient(135deg, var(--primary-color), #3c6382);
-    border-radius: 16px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -706,40 +762,28 @@ h2 {
 }
 
 .parceiro-quadrado i {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: var(--white);
     opacity: 0.9;
 }
 
 .parceiro-item:hover .parceiro-quadrado {
-    transform: translateY(-5px);
+    transform: translateY(-8px) rotate(3deg);
     box-shadow: var(--shadow-hover);
     background: var(--accent-color);
 }
 
 .parceiro-nome {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--primary-color);
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .parceiro-desc {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: var(--text-light);
-    line-height: 1.3;
-}
-
-/* ===== ANIMAÇÕES DE SCROLL (FADE-UP) ===== */
-.fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.revealed {
-    opacity: 1;
-    transform: translateY(0);
+    line-height: 1.4;
 }
 
 /* ===== FOOTER ===== */
@@ -802,12 +846,8 @@ h2 {
     }
 
     .parceiro-quadrado {
-        width: 90px;
-        height: 90px;
-    }
-
-    .parceiro-quadrado i {
-        font-size: 2.2rem;
+        width: 120px;
+        height: 120px;
     }
 
     .corporate-bar {
@@ -841,12 +881,12 @@ h2 {
     }
 
     .parceiro-quadrado {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 
     .parceiro-quadrado i {
-        font-size: 2rem;
+        font-size: 2.8rem;
     }
 
     .whatsapp-float {
@@ -855,5 +895,9 @@ h2 {
         font-size: 1.6rem;
         bottom: 20px;
         right: 20px;
+    }
+
+    .logo a {
+        font-size: 1.5rem;
     }
 }
