@@ -108,3 +108,18 @@ if (contactForm) {
         window.open(url, '_blank');
     });
 }
+
+// ===== ANIMAÇÕES DE SCROLL (FADE-UP) =====
+const fadeElements = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            // Opcional: continuar observando? Se quiser que a animação ocorra apenas uma vez, pode desobservar
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }); // ajusta para animar um pouco antes de entrar
+
+fadeElements.forEach(el => observer.observe(el));
