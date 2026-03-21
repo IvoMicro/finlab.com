@@ -109,17 +109,32 @@ if (contactForm) {
     });
 }
 
-// ===== ANIMAÇÕES DE SCROLL (FADE-UP) =====
-const fadeElements = document.querySelectorAll('.fade-up');
-
-const observer = new IntersectionObserver((entries) => {
+// ===== ANIMAÇÃO DOS CARDS (FADE-UP) =====
+const revealCards = document.querySelectorAll('.scroll-reveal');
+const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
-            // Opcional: continuar observando? Se quiser que a animação ocorra apenas uma vez, pode desobservar
-            observer.unobserve(entry.target);
+            fadeObserver.unobserve(entry.target);
         }
     });
-}, { threshold: 0.2, rootMargin: '0px 0px -50px 0px' }); // ajusta para animar um pouco antes de entrar
+}, { threshold: 0.2, rootMargin: '0px 0px -30px 0px' });
 
-fadeElements.forEach(el => observer.observe(el));
+revealCards.forEach(card => fadeObserver.observe(card));
+
+// ===== MOSTRAR OVERLAY AUTOMATICAMENTE AO SCROLL =====
+const serviceCards = document.querySelectorAll('.service-card');
+const overlayObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const card = entry.target;
+            card.classList.add('auto-overlay');
+            setTimeout(() => {
+                card.classList.remove('auto-overlay');
+            }, 2000);
+            overlayObserver.unobserve(card);
+        }
+    });
+}, { threshold: 0.3 });
+
+serviceCards.forEach(card => overlayObserver.observe(card));
